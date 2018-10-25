@@ -22,11 +22,15 @@ async function getWeather() {
 	// return response
 }
 
-
 getWeather()
 
 //this test console logs env var of api url, plus the coords
-const getCoords = await getLocation()
-const fullURL = `${process.env.API_URL}/${getCoords.lat},${getCoords.lon}`
-console.log(fullURL)
+async function test() {
+	const getCoords = await getLocation()
+	const fullURL = `${process.env.API_URL}/${getCoords.lat},${getCoords.lon}`
+	console.log(fullURL)
+}
+
+test()
+
 
