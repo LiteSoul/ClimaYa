@@ -1,6 +1,6 @@
 //1 get location
 async function getLocation() {
-	const fetchIP = await fetch('http://ip-api.com/json')
+	const fetchIP = await fetch('https://ipapi.co/json/')
 	const response = await fetchIP.json()
 	console.log(response)
 	return response
@@ -14,7 +14,7 @@ async function getWeather() {
 
 	const fetchWeather = await fetch(
 		//`https://cors.io/?https://api.darksky.net/forecast/${darkSkyKey}/42.9150,-77.784323`
-		`https://cors.io/?https://api.darksky.net/forecast/${darkSkyKey}/${getCoords.lat},${getCoords.lon}`
+		`https://cors.io/?https://api.darksky.net/forecast/${darkSkyKey}/${getCoords.latitude},${getCoords.longitude}`
 	)
 	const response = await fetchWeather.json()
 	// const response = await fetchWeather.json()
