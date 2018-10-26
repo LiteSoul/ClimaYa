@@ -2,7 +2,7 @@
 async function getLocation() {
 	const fetchIP = await fetch('http://ip-api.com/json')
 	const response = await fetchIP.json()
-	// return { 'lat': response.lat, 'lon': response.lon }
+	console.log(response)
 	return response
 }
 
