@@ -9,19 +9,17 @@ async function getLocation() {
 //2 get weather data by sending location
 
 async function getWeather() {
-	// const getCoords = await getLocation()
+	const getCoords = await getLocation()
 	const darkSkyKey = '5056977b57b41fa41e56a32728a674e5'
 
-	// const fetchWeather = await fetch(
-	// 	`https://api.darksky.net/forecast/${darkSkyKey}/${getCoords.lat},${getCoords.lon}`, function (forecast) { })
-
-
 	const fetchWeather = await fetch(
-		`https://api.darksky.net/forecast/${darkSkyKey}/42.9150,-77.784323`, function (forecast) { })
+		//`https://cors.io/?https://api.darksky.net/forecast/${darkSkyKey}/42.9150,-77.784323`
+		`https://cors.io/?https://api.darksky.net/forecast/${darkSkyKey}/${getCoords.lat},${getCoords.lon}`
+	)
+	const response = await fetchWeather.json()
 	// const response = await fetchWeather.json()
 	// console.log(response)
-	console.log(forecast)
-	console.log(fetchWeather)
+	console.log(response)
 	// return response
 }
 
