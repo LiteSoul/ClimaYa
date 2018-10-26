@@ -9,7 +9,7 @@ async function getLocation() {
 //2 get weather data by sending location
 
 async function getWeather() {
-	const getCoords = await getLocation()
+	// const getCoords = await getLocation()
 	const darkSkyKey = '5056977b57b41fa41e56a32728a674e5'
 
 	// const fetchWeather = await fetch(
