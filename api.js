@@ -16,7 +16,7 @@ class Api {
 	async getWeather(coords) {
 		const fetchWeather = await fetch(`
 			https://cors.io/?https://api.darksky.net/forecast/${this.darkSkyKey}/${coords.latitude},${coords.longitude}
-				?lang=es&?units=auto?exclude=minutely
+				?lang=es&?units=auto?exclude=flags,minutely
 		`)
 		const response = await fetchWeather.json()
 		return response
