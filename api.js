@@ -16,7 +16,7 @@ class Api {
 	async getWeather(coords) {
 		const fetchWeather = await fetch(`
 			https://api.darksky.net/forecast/${this.darkSkyKey}/${coords.latitude},${coords.longitude}
-			?format=jsonp&lang=es&units=si&exclude=flags,minutely
+			?lang=es&units=si&exclude=flags,minutely
 		`)
 		const response = await fetchWeather.json()
 		return response
