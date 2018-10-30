@@ -14,39 +14,35 @@
 </head>
 
 <body>
-	<div id="div1"></div>
-	<div id="div2"></div>
 
-	<nav class="demo">
+	<nav>
 		<a href="#" class="brand">
 			<!-- <img class="logo" src="/web/img/basket.png" /> -->
 			<span>Clima Ya</span>
 		</a>
-
 		<!-- responsive-->
 		<!-- <input id="bmenub" type="checkbox" class="show">
 		<label for="bmenub" class="burger pseudo button">&#8801;</label> -->
-
 		<div class="menu">
-			<div class="pseudo button">
-				<i class="fas fa-building"></i>
-				Chanta Fe
-			</div>
+			<div class="pseudo button" id="location"></div>
 		</div>
 	</nav>
 
-	<div class="flex four">
+	<div class="flex two main">
 		<div class="pseudo button">Ahora</div>
 		<div class="half">
 			<i class="fas fa-sun"></i>
 		</div>
-		<div class="three-fourth">Parcialmente nublado</div>
+		<div class="three-fourth" id="now"></div>
 		<button class="full small-button">Ver las próximas horas</button>
+	</div>
+
+	<div class="flex four">
 		<div>Hoy</div>
-		<div class="three-fourth">Parcialmente nublado</div>
+		<div class="three-fourth" id="today"></div>
 		<button class="full small-button">Ver los próximos días</button>
 		<div>Esta semana</div>
-		<div class="three-fourth">Parcialmente nublado</div>
+		<div class="three-fourth" id="week"></div>
 	</div>
 
 	<script src="api.js"></script>

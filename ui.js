@@ -1,11 +1,19 @@
 class UI {
 	constructor() {
-		this.div1 = document.getElementById('div1')
-		this.div2 = document.getElementById('div2')
+		this.location = document.getElementById('location')
+		this.now = document.getElementById('now')
+		this.today = document.getElementById('today')
+		this.week = document.getElementById('week')
 	}
 
 	display(ip, weather) {
-		this.div1.innerHTML = ip.city
-		this.div2.innerHTML = weather.hourly.summary
+		this.location.innerText = ip.city
+		this.location.innerHTML = `
+			<i class="fas fa-map-marker-alt"></i>
+			${ip.city}
+		`
+		this.now.innerText = weather.currently.summary
+		this.today.innerText = weather.hourly.summary
+		this.week.innerText = weather.daily.summary
 	}
 }
