@@ -16,10 +16,12 @@
 
 <body>
 
-	<header>
-		<a href="#" class="logo">Clima Ya</a>
-		<a href="#" class="button" id="location">Detectando ubicación</a>
-	</header>
+	<div class="container">
+		<header class="row">
+			<a href="#" class="logo col-sm">Clima Ya</a>
+			<a href="#" class="button col-sm" id="location">Detectando ubicación</a>
+		</header>
+	</div>
 
 	<div class="container" id="spinner">
 		<div class="row">
@@ -31,23 +33,29 @@
 
 	<div class="container hidden" id="content">
 
+
+
 		<div class='row'>
 			<div class="col-sm">
 				<img src="" id="icon">
-				<h4 id="now-degree"></h4>
-				<h2 id="now"></h2>
+				<h4 id="current-degree"></h4>
+				<h2 id="current"></h2>
 			</div>
 		</div>
+
+		<hr>
 
 		<h5 id="today-degree"></h5>
 		<h4 id="today"></h4>
 
-		<div class="title">Esta semana</div>
+		<hr>
+
+		<h5 class="title">Esta semana</h5>
 		<div id="week"></div>
 
 		<div class="collapse">
 			<input type="checkbox" id="collapse-section1" aria-hidden="true">
-			<label for="collapse-section1" aria-hidden="true">Próximas horas:</label>
+			<label for="collapse-section1" aria-hidden="true">Ver hora por hora</label>
 			<div>
 				<p>This is the first section of the collapse</p>
 			</div>
@@ -55,7 +63,7 @@
 
 		<div class="collapse">
 			<input type="checkbox" id="collapse-section2" aria-hidden="true">
-			<label for="collapse-section2" aria-hidden="true">Próximos días:</label>
+			<label for="collapse-section2" aria-hidden="true">Ver los próximos días</label>
 			<div>
 				<p>This is the second section of the collapse</p>
 			</div>
