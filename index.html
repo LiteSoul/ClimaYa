@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
 	<meta charset="UTF-8">
@@ -17,16 +18,21 @@
 
 	<header>
 		<a href="#" class="logo">Clima Ya</a>
-		<a href="#" class="button" id="location">...</a>
+		<a href="#" class="button" id="location">Detectando ubicación</a>
 	</header>
 
-	<div class="container">
+	<div class="spinner" id="spinner"></div>
+	<div class="container hidden" id="content">
 
-		<div>Ahora</div>
-		<div>
-			<i class="fas fa-cloud-sun"></i>
-		</div>
+		<img src="" id="icon">
+		<div class="title">Ahora</div>
 		<h2 id="now"></h2>
+
+		<div class="title">Hoy</div>
+		<div id="today"></div>
+
+		<div class="title">Esta semana</div>
+		<div id="week"></div>
 
 		<div class="collapse">
 			<input type="checkbox" id="collapse-section1" aria-hidden="true">
@@ -36,9 +42,6 @@
 			</div>
 		</div>
 
-		<div>Hoy</div>
-		<div id="today"></div>
-
 		<div class="collapse">
 			<input type="checkbox" id="collapse-section2" aria-hidden="true">
 			<label for="collapse-section2" aria-hidden="true">Próximos días:</label>
@@ -46,9 +49,6 @@
 				<p>This is the second section of the collapse</p>
 			</div>
 		</div>
-
-		<div>Esta semana</div>
-		<div id="week"></div>
 
 	</div>
 
