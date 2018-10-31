@@ -14,7 +14,7 @@ class UI {
 	display(ip, weather) {
 		this.location.textContent = ip.city
 		this.location.innerHTML = `
-			<i class="fas fa-map-marker-alt"></i> ${ip.city}
+			➤ ${ip.city}
 		`
 		this.currentDegree.innerHTML = `
 			Ahora ${Math.round(weather.currently.temperature)}º (sensación ${Math.round(weather.currently.apparentTemperature)}º)
