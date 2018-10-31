@@ -1,6 +1,7 @@
 class UI {
 	constructor() {
 		this.location = document.getElementById('location')
+		this.nowDegree = document.getElementById('now-degree')
 		this.now = document.getElementById('now')
 		this.today = document.getElementById('today')
 		this.week = document.getElementById('week')
@@ -14,10 +15,14 @@ class UI {
 		this.location.innerHTML = `
 			<i class="fas fa-map-marker-alt"></i> ${ip.city}
 		`
-		this.now.innerHTML = `
-			<small>Ahora</small>${weather.currently.summary}
+		this.nowDegree.innerHTML = `
+			Ahora ${Math.round(weather.currently.temperature)}º (sensación ${Math.round(weather.currently.apparentTemperature)}º)
 		`
+		this.now.textContent = weather.currently.summary
 		this.today.textContent = weather.hourly.summary
+		this.today.innerHTML = `
+		<small>Hoy ${Math.round(weather.currently.temperature)}º</small>${weather.hourly.summary}
+		`
 		this.week.textContent = weather.daily.summary
 		this.icon.src = `
 			https://darksky.net/images/weather-icons/${weather.currently.icon}.png
