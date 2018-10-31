@@ -1,3 +1,15 @@
 .title{
 	text-decoration: underline
 }
+
+#now-degree{
+	font-size: 1.3em
+}
+
+#spinner{
+	text-align: center
+}
+
+.col-sm{
+	text-align: center
+}
