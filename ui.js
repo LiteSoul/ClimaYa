@@ -10,15 +10,18 @@ class UI {
 	}
 
 	display(ip, weather) {
-		this.location.innerText = ip.city
+		this.location.textContent = ip.city
 		this.location.innerHTML = `
-			<i class="fas fa-map-marker-alt"></i>
-			${ip.city}
+			<i class="fas fa-map-marker-alt"></i> ${ip.city}
 		`
-		this.now.innerText = weather.currently.summary
-		this.today.innerText = weather.hourly.summary
-		this.week.innerText = weather.daily.summary
-		this.icon.src = `https://darksky.net/images/weather-icons/${weather.currently.icon}.png`
+		this.now.innerHTML = `
+			<small>Ahora</small>${weather.currently.summary}
+		`
+		this.today.textContent = weather.hourly.summary
+		this.week.textContent = weather.daily.summary
+		this.icon.src = `
+			https://darksky.net/images/weather-icons/${weather.currently.icon}.png
+		`
 
 		if (weather) {
 			this.spinner.classList.add('hidden')
