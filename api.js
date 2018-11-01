@@ -8,6 +8,7 @@ class Api {
 	//get ip location
 	async getLocation() {
 		const fetchIP = await fetch('https://ipapi.co/json/')
+		//alternative https://ipinfo.io/json
 		const response = await fetchIP.json()
 		return response
 	}
