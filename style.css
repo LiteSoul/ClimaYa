@@ -18,9 +18,19 @@ header {
 }
 
 #logo {
-	text-align: left
+	text-align: left;
+	font-size: 1.5em;
+	color: blueviolet;
+}
+
+#logo img {
+	width: 1.1em
 }
 
 #location {
 	text-align: right
+}
+
+#today-block {
+	background-color: deepskyblue;
 }

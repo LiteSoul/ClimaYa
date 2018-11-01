@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="favicon.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
 	<link rel="stylesheet" href="style.css">
 	<title>Clima Ya</title>
@@ -15,7 +16,8 @@
 	<div class="container">
 		<header class="row">
 			<!-- <a href="#" class="logo col-sm-4">Clima Ya</a> -->
-			<a href="#" class="button col-sm" id="logo">☔ Clima Ya</a>
+			<a href="#" class="button col-sm" id="logo">
+				Clima<img src="favicon.png">Ya</a>
 			<a href="#" class="button col-sm" id="location">Localizando</a>
 		</header>
 	</div>
@@ -40,19 +42,23 @@
 			</div>
 		</div>
 
-		<hr>
+		<canvas id="icon1" width="128" height="128"></canvas>
+		<canvas id="icon2" width="128" height="128"></canvas>
 
-		<h5 id="today-degree"></h5>
-		<h4 id="today"></h4>
+		<div id="today-block">
+			<hr>
+			<h5 id="today-degree"></h5>
+			<h4 id="today"></h4>
+			<hr>
+		</div>
 
-		<hr>
 
 		<h5 class="title">Esta semana</h5>
 		<div id="week"></div>
 
 		<div class="collapse">
 			<input type="checkbox" id="collapse-section1" aria-hidden="true">
-			<label for="collapse-section1" aria-hidden="true">↶ Ver hora por hora ↷</label>
+			<label for="collapse-section1" aria-hidden="true">↶ Ver cada hora ↷</label>
 			<div>
 				<p>This is the first section of the collapse</p>
 			</div>
@@ -68,6 +74,7 @@
 
 	</div>
 
+	<script src="skycons.js"></script>
 	<script src="api.js"></script>
 	<script src="ui.js"></script>
 	<script src="app.js"></script>
