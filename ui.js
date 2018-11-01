@@ -48,5 +48,34 @@ class UI {
 			this.spinner.classList.add('hidden')
 			this.content.classList.remove('hidden')
 		}
+
+		var timenow = weather.currently.time + '000'
+		var timenumber = Number(timenow)
+		console.log(timenow)
+		console.log(timenumber)
+		var date = new Date(timenumber)
+		console.log(date)
+
+		var timenow0 = weather.hourly.data[0].time + '000'
+		var timenumber0 = Number(timenow0)
+		console.log(timenow0)
+		console.log(timenumber0)
+		var date0 = new Date(timenumber0)
+		console.log(date0)
+
+		var timenow1 = weather.hourly.data[1].time + '000'
+		var timenumber1 = Number(timenow1)
+		console.log(timenow1)
+		console.log(timenumber1)
+		var date1 = new Date(timenumber1)
+		console.log(date1)
+
+		var timenow2 = weather.hourly.data[2].time * 1000
+		console.log(timenow2)
+		var date2 = new Date(timenow2)
+		console.log(date2)
+		var hours = date2.getHours()
+		console.log(hours)
+
 	}
 }

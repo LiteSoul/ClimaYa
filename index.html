@@ -32,8 +32,6 @@
 
 	<div class="container hidden" id="content">
 
-
-
 		<div class='row'>
 			<div class="col-sm">
 				<canvas id="icon" width="128" height="128"></canvas>
@@ -42,31 +40,37 @@
 			</div>
 		</div>
 
-		<div id="today-block">
-			<hr>
-			<h5 id="today-degree"></h5>
-			<h4 id="today"></h4>
-			<h5 id="today-rain"></h5>
-			<hr>
+		<hr>
+
+		<h5 id="today-degree"></h5>
+		<h4 id="today"></h4>
+		<h5 id="today-rain"></h5>
+
+		<div class="collapse">
+			<input type="checkbox" id="collapse1" aria-hidden="true">
+			<label for="collapse1" aria-hidden="true">↶ Ver cada hora ↷</label>
+			<div id="horas" class="row">
+				<p class="col-sm-3">...</p>
+				<p class="col-sm-4">...</p>
+				<p class="col-sm-3">...</p>
+				<p class="col-sm-3">...</p>
+				<p class="col-sm-4">...</p>
+				<p class="col-sm-3">...</p>
+			</div>
 		</div>
+
+		<hr>
 
 		<h5 class="title">Para esta semana</h5>
 		<div id="week"></div>
 
 		<div class="collapse">
-			<input type="checkbox" id="collapse-section1" aria-hidden="true">
-			<label for="collapse-section1" aria-hidden="true">↶ Ver cada hora ↷</label>
-			<div>
-				<p>...</p>
-			</div>
-		</div>
-
-		<div class="collapse">
-			<input type="checkbox" id="collapse-section2" aria-hidden="true">
-			<label for="collapse-section2" aria-hidden="true">↶ Ver los próximos días ↷</label>
-			<div>
-				<p>...</p>
-			</div>
+			<input type="checkbox" id="collapse2" aria-hidden="true">
+			<label for="collapse2" aria-hidden="true">↶ Ver cada día ↷</label>
+			<table class="horizontal">
+				<div>
+					<p>...</p>
+				</div>
 		</div>
 
 	</div>

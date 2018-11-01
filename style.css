@@ -13,7 +13,6 @@
 
 header {
 	justify-content: space-between;
-
 }
 
 #logo {
@@ -28,4 +27,8 @@ header {
 
 #location {
 	text-align: right
+}
+
+#horas {
+	justify-content: space-between;
 }
