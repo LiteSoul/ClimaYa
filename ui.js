@@ -31,6 +31,13 @@ class UI {
 		this.icon.src = `
 			https://darksky.net/images/weather-icons/${weather.currently.icon}.png
 		`
+		const upper = weather.currently.icon.toUpperCase()
+		const final = upper.replace('-', '_')
+		const skyconsType = 'Skycons.' + final
+		console.log(skyconsType)
+		skycons.add(document.getElementById("icon2"), skyconsType);
+		skycons.play();
+		skycons.set("icon1", skyconsType);
 
 		if (weather) {
 			this.spinner.classList.add('hidden')
