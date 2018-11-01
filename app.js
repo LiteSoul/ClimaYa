@@ -6,4 +6,4 @@ const ui = new UI()
 // document.addEventListener('DOMContentLoaded', api.popNsend())
 api.popNsend()
 
-const skycons = new Skycons({ "color": "black" });
+
