@@ -40,6 +40,7 @@ header {
 	justify-content: space-between;
 }
 #current-block-left {
+	align-self: center;
 	text-align: left
 }
 
