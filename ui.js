@@ -70,12 +70,23 @@ class UI {
 		const weather = this.weather
 
 		weather.hourly.data.forEach(each => {
+			//hour
 			const date = new Date(each.time * 1000)
-			const hour = date.getHours() + 'hs'
-			const hourNode = document.createElement('p')
-			const hourText = document.createTextNode(hour)
-			hourNode.appendChild(hourText)
-			this.hours.appendChild(hourNode)
+			const hour = document.createElement('div')
+			hour.textContent = date.getHours() + 'hs'
+			this.hours.appendChild(hour)
+			//icon
+			const icon = document.createElement('div')
+			icon.innerHTML = `<img src="https://darksky.net/images/weather-icons/${each.icon}.png" alt="">`
+			this.hours.appendChild(icon)
+			//temp
+			const temp = document.createElement('div')
+			temp.innerHTML = `${Math.round(each.temperature)}º <small>(${Math.round(each.apparentTemperature)}º)</small>`
+			this.hours.appendChild(temp)
+			//words
+			const words = document.createElement('div')
+			words.textContent = 'wordings'
+			this.hours.appendChild(words)
 		})
 	}
 }

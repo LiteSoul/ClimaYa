@@ -36,9 +36,6 @@ header {
 	text-align: right
 }
 
-#horas {
-	justify-content: space-between;
-}
 #current-block-left {
 	align-self: center;
 	text-align: left
@@ -61,3 +58,12 @@ header {
 #current {
 	font-size: 1.6em
 }
+
+#hours {
+	text-align: left
+}
+
+#hours img {
+	width: 25px
+}
+
