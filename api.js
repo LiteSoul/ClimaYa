@@ -7,17 +7,18 @@ class Api {
 
 	//get ip location
 	async getLocation() {
-		const fetchIP = await fetch('https://ipapi.co/json/')
-		//alternative https://ipinfo.io/json
+		const fetchIP = await fetch('https://ipinfo.io/json')
+		//alternative https://ipapi.co/json/
 		const response = await fetchIP.json()
 		return response
 	}
 
 	//get weather data by sending location
 	async getWeather(coords) {
+		const loc = coords.loc.split(',')
 		const fetchWeather = await fetch(`
 			https://cors-anywhere.herokuapp.com/
-			https://api.darksky.net/forecast/${this.darkSkyKey}/${coords.latitude},${coords.longitude}
+			https://api.darksky.net/forecast/${this.darkSkyKey}/${loc[0]},${loc[1]}
 			?lang=es&units=si&exclude=flags,minutely
 		`)
 		//in the case of santa fe is this url:

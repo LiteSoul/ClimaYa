@@ -1,5 +1,7 @@
 class UI {
 	constructor() {
+		this.ip = {}
+		this.weather = {}
 		this.location = document.getElementById('location')
 		this.current = document.getElementById('current')
 		this.currentDegree = document.getElementById('current-degree')
@@ -10,14 +12,31 @@ class UI {
 		this.week = document.getElementById('week')
 		this.spinner = document.getElementById('spinner')
 		this.content = document.getElementById('content')
+		this.hours = document.getElementById('hours')
 	}
 
 	display(ip, weather) {
+		//send data to constructor
+		this.ip = ip
+		this.weather = weather
+
+		this.cityLocation()
+		this.eachHour()
+		this.showWeather()
+	}
+
+	cityLocation() {
+		const ip = this.ip
 		//city lacation
 		this.location.textContent = ip.city
 		this.location.innerHTML = `
-			➤ ${ip.city}
-		`
+		➤ ${ip.city}
+	`
+	}
+
+	showWeather() {
+		const weather = this.weather
+
 		//current weather
 		this.current.textContent = weather.currently.summary
 		this.currentDegree.textContent = Math.round(weather.currently.temperature) + 'º'
@@ -45,20 +64,18 @@ class UI {
 			this.spinner.classList.add('hidden')
 			this.content.classList.remove('hidden')
 		}
+	}
 
-		var timenow = weather.currently.time * 1000
-		console.log(timenow)
-		var date = new Date(timenow)
-		console.log(date)
-		var hours = date.getHours()
-		console.log(hours + 'ahora')
+	eachHour() {
+		const weather = this.weather
 
-		var timenow0 = weather.hourly.data[0].time * 1000
-		console.log(timenow0)
-		var date0 = new Date(timenow0)
-		console.log(date0)
-		var hours = date0.getHours()
-		console.log(hours + 'hs')
-
+		weather.hourly.data.forEach(each => {
+			const date = new Date(each.time * 1000)
+			const hour = date.getHours() + 'hs'
+			const hourNode = document.createElement('p')
+			const hourText = document.createTextNode(hour)
+			hourNode.appendChild(hourText)
+			this.hours.appendChild(hourNode)
+		})
 	}
 }
