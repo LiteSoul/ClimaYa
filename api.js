@@ -20,6 +20,8 @@ class Api {
 			https://api.darksky.net/forecast/${this.darkSkyKey}/${coords.latitude},${coords.longitude}
 			?lang=es&units=si&exclude=flags,minutely
 		`)
+		//in the case of santa fe is this url:
+		//https://api.darksky.net/forecast/5056977b57b41fa41e56a32728a674e5/-31.6333,-60.7?lang=es&units=si&exclude=flags,minutely
 		const response = await fetchWeather.json()
 		return response
 	}

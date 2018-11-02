@@ -22,6 +22,8 @@
 		</header>
 	</div>
 
+
+
 	<div class="container" id="spinner">
 		<div class="row">
 			<div class="col-sm">
@@ -32,47 +34,59 @@
 
 	<div class="container hidden" id="content">
 
-		<div class='row'>
-			<div class="col-sm">
-				<canvas id="icon" width="128" height="128"></canvas>
-				<h2 id="current"></h2>
-				<h4 id="current-degree"></h4>
-			</div>
-		</div>
+		<div class="container">
 
-		<hr>
+			<div class='row' id="current-block">
+				<div class="col-sm-5" id="current-block-left">
+					<canvas id="icon" width="128" height="128"></canvas>
 
-		<h5 id="today-degree"></h5>
-		<h4 id="today"></h4>
-		<h5 id="today-rain"></h5>
-
-		<div class="collapse">
-			<input type="checkbox" id="collapse1" aria-hidden="true">
-			<label for="collapse1" aria-hidden="true">↶ Ver cada hora ↷</label>
-			<div id="horas" class="row">
-				<p class="col-sm-3">...</p>
-				<p class="col-sm-4">...</p>
-				<p class="col-sm-3">...</p>
-				<p class="col-sm-3">...</p>
-				<p class="col-sm-4">...</p>
-				<p class="col-sm-3">...</p>
-			</div>
-		</div>
-
-		<hr>
-
-		<h5 class="title">Para esta semana</h5>
-		<div id="week"></div>
-
-		<div class="collapse">
-			<input type="checkbox" id="collapse2" aria-hidden="true">
-			<label for="collapse2" aria-hidden="true">↶ Ver cada día ↷</label>
-			<table class="horizontal">
-				<div>
-					<p>...</p>
 				</div>
-		</div>
+				<div class="col-sm" id="current-block-right">
+					<div>
+						<span id="current-degree"></span>
+						<span id="current-degree-st"></span>
+					</div>
 
+					<div id="current"></div>
+
+				</div>
+			</div>
+
+			<hr>
+
+			<h5 id="today-degree"></h5>
+			<h4 id="today"></h4>
+			<h5 id="today-rain"></h5>
+
+			<div class="collapse">
+				<input type="checkbox" id="collapse1" aria-hidden="true">
+				<label for="collapse1" aria-hidden="true">↶ Ver cada hora ↷</label>
+				<div id="horas" class="row">
+					<p class="col-sm-3">...</p>
+					<p class="col-sm-4">...</p>
+					<p class="col-sm-3">...</p>
+					<p class="col-sm-3">...</p>
+					<p class="col-sm-4">...</p>
+					<p class="col-sm-3">...</p>
+				</div>
+			</div>
+
+			<hr>
+
+			<h5 class="title">Para esta semana</h5>
+			<div id="week"></div>
+
+			<div class="collapse">
+				<input type="checkbox" id="collapse2" aria-hidden="true">
+				<label for="collapse2" aria-hidden="true">↶ Ver cada día ↷</label>
+				<table class="horizontal">
+					<div>
+						<p>...</p>
+					</div>
+			</div>
+
+
+		</div>
 	</div>
 
 	<script src="skycons.js"></script>

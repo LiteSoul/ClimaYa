@@ -6,5 +6,5 @@ const ui = new UI()
 //to wait till dom load document.addEventListener('DOMContentLoaded', api.popNsend())
 api.popNsend()
 //init skycons
-const skycons = new Skycons({ "color": "blueviolet" })
+const skycons = new Skycons({ "color": "black" })
 skycons.play()
