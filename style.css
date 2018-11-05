@@ -1,5 +1,5 @@
-* {
-	font-family: 'Roboto';
+body {
+  height: 100%;
 }
 
 body {
@@ -8,9 +8,6 @@ body {
 	background: linear-gradient(to bottom, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-header {
-	background-color: transparent;
-}
 
 #spinner,
 #content {
@@ -40,7 +37,7 @@ header {
 }
 
 #location {
-	text-align: right
+	text-align: right;
 }
 
 #current-block-left {
@@ -74,4 +71,3 @@ header {
 #hours img {
 	width: 25px
 }
-
