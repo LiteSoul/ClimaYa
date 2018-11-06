@@ -24,14 +24,14 @@
 	<!-- </div> -->
 
 	<div class="container">
-		<div class="row">
-			<div class="col-sm">
+		<div class="row" id="header">
+			<div class="col-sm-4">
 				<div id="logo">
 					Clima<img src="favicon.png">Ya
 				</div>
 			</div>
-			<div class="col-sm">
-				<div id="location" class="button">Localizando</div>
+			<div class="col-sm-8" id="header-location-block">
+				<div class="button" id="location">Localizando</div>
 			</div>
 		</div>
 	</div>
@@ -80,17 +80,15 @@
 		<div class="collapse">
 			<input type="checkbox" id="collapse2" aria-hidden="true">
 			<label for="collapse2" aria-hidden="true">↶ Ver cada día ↷</label>
-			<table class="horizontal">
-				<div>
-					<p>...</p>
-				</div>
+			<div id="days" class="row cols-sm-3">
+			</div>
 		</div>
-
-		<br>
 
 	</div>
 
-	<div class="foot">crazy</div>
+	<div class="container">
+		<div id="footer">Powered by Darksky</div>
+	</div>
 
 	<script src="skycons.js"></script>
 	<script src="api.js"></script>
